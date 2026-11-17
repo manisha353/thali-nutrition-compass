@@ -443,7 +443,10 @@ function FoodRow({ item, index }: { item: NutritionResponse["items"][number]; in
     { color: "var(--fiber)", tint: "color-mix(in oklab, var(--fiber) 12%, var(--card))" },
     { color: "var(--fat)", tint: "color-mix(in oklab, var(--fat) 12%, var(--card))" },
   ];
-  const color = palette[index % palette.length];
+  const color = palette[index % palette.length] ?? {
+    color: "var(--protein)",
+    tint: "color-mix(in oklab, var(--protein) 12%, var(--card))",
+  };
 
   return (
     <div className="flex items-center gap-3 py-3">
