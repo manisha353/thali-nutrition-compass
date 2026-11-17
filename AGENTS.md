@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+Keep user-invoked image analysis behind a client-safe `*.functions.ts` wrapper and a server-only `*.server.ts` implementation, so private AI calls never enter browser code.
